@@ -39,7 +39,7 @@ jobs:
           #Set artifact name
           name: artifact
           #From this path
-          path: target/rr-reveal-api-1.0.0.jar
+          path: target/eb-java-github-ci-cd
   #Deploy's job
   deploy:
     #Depends on build's job
@@ -60,8 +60,8 @@ jobs:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           use_existing_version_if_available: false
-          application_name: reveal-api-dev
-          environment_name: Revealapidev-env
+          application_name: eb-java-github-ci-cd
+          environment_name: Ebjavagithubcicd-env
           version_label: ${{github.SHA}}
           region: us-east-2
-          deployment_package: rr-reveal-api-1.0.0.jar
+          deployment_package: eb-java-github-ci-cd
