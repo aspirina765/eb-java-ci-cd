@@ -39,7 +39,7 @@ jobs:
           #Set artifact name
           name: artifact
           #From this path
-          path: target/eb-java-github-ci-cd
+          path: target/eb-java-github-ci-cd.jar
   #Deploy's job
   deploy:
     #Depends on build's job
@@ -64,4 +64,4 @@ jobs:
           environment_name: Ebjavagithubcicd-env
           version_label: ${{github.SHA}}
           region: us-east-2
-          deployment_package: eb-java-github-ci-cd
+          deployment_package: eb-java-github-ci-cd.jar
