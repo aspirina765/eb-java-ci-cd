@@ -63,5 +63,5 @@ jobs:
           application_name: eb-java-github-ci-cd
           environment_name: Ebjavagithubcicd-env
           version_label: ${{github.SHA}}
-          region: us-east-2
+          region: us-east-1
           deployment_package: eb-java-ci-cd-0.0.1-SNAPSHOT.jar
