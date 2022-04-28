@@ -64,7 +64,7 @@ jobs:
   #Deploy's job
   deploy:
     #Depends on build's job
-    needs: build
+    needs: scan
     name: Deploy to Elastic Beanstalk
      #Will run steps on latest version of ubuntu
     runs-on: ubuntu-latest
