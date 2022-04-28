@@ -15,6 +15,9 @@
 	<description>Project demonstrating CI/CD using AWS Beanstalk and Github Actions</description>
 	<properties>
 		<java.version>1.8</java.version>
+		<sonar.projectKey>eb-java-ci-cd</sonar.projectKey>
+        <sonar.organization>cycorax12</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
 	</properties>
 	<dependencies>
 		<dependency>
