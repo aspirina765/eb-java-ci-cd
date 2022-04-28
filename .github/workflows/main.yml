@@ -43,7 +43,8 @@ jobs:
           #Relative path to jar file
           path: target/eb-java-ci-cd-0.0.1-SNAPSHOT.jar
   scan:
-    name: Build Archive
+    needs: build
+    name: Sonar Analysis
     #Will run steps on latest version of ubuntu
     runs-on: ubuntu-latest
     steps:
