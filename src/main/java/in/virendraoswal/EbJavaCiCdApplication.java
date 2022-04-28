@@ -19,8 +19,6 @@ public class EbJavaCiCdApplication {
 class VersionController {
 	
 	
-	private String unusedVariable;
-
 	@Value("${version}")
 	private String version;
 
