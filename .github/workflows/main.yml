@@ -30,14 +30,14 @@ jobs:
       - name: Build with Maven
         run: mvn -B package -DskipTests --file pom.xml
       - name: SonarCloud Scan
-          uses: sonarsource/sonarcloud-github-action@master
-          env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-           with:
-            args: >
-              -Dsonar.organization=cycorax12
-              -Dsonar.projectKey=eb-java-ci-cd
+        uses: sonarsource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        with:
+          args: >
+            -Dsonar.organization=cycorax12
+            -Dsonar.projectKey=eb-java-ci-cd
       - name: Upload JAR
         # We upload so we can re-use same jar in next job.
         uses: actions/upload-artifact@v2
